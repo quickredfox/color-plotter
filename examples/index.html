@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>color-plot</title>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="../lib/color-plotter.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+        window.ColorPlotter.ready( function( CP ){
+            CP.plotColors( 
+                {
+                    type: 'cartesian', // havent figured out polar equations yet
+                    width:  390,       // (will be 10 pixels wider for greyscale )
+                    height: 100,      
+                    colors: [              
+                        '#333333',    
+                        'rgb(100,100,100)', // I think my hsl() support is broken but rgb works also
+                        '00ff33', // omitting the hash
+                        '00cc66',
+                        '009999',
+                        '0066cc',
+                        '0033ff',
+                        'CCFFCC'
+                    ]
+                }
+            );
+            
+        })
+
+  </script>
+</head>
+<body>
+    <img
+        id="cartesian-colors"
+        src="../images/cartesian.png"
+        style="display:none"
+    >
+    <img
+        id="polar-colors"
+        src="../images/polar.png"
+        style="display:none"
+    >  
+    <img
+        id="gray-colors"
+        src="../images/gray.png"
+        style="display:none"
+    >
+</body>
+</html>
